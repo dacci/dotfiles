@@ -1,0 +1,17 @@
+[core]
+	autocrlf = false
+	filemode = false
+	symlinks = true
+	fscache = true
+[push]
+	default = simple
+[branch]
+	autosetupmerge = true
+[rebase]
+	autosquash = true
+	autostash = true
+[merge]
+	tool = vimdiff3
+[mergetool]
+	prompt = false
+	keepBackup = false

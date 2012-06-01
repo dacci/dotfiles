@@ -1,0 +1,23 @@
+# Looks
+Transparency=off
+CursorType=block
+CursorBlinks=no
+# Text
+Font=ＭＳ ゴシック
+BoldAsFont=no
+Locale=en_US
+Charset=UTF-8
+# Mouse
+RightClickAction=paste
+# Window
+Columns=128
+Rows=48
+ScrollbackLines=4096
+ScrollMod=off
+# Terminal
+BellType=0
+BellTaskbar=no
+# Command line
+Class=PuTTY
+# Hidden
+RowSpacing=-2
