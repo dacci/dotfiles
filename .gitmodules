@@ -4,3 +4,6 @@
 [submodule "vim/bundle/ps1"]
 	path = vim/bundle/ps1
 	url = https://github.com/PProvost/vim-ps1.git
+[submodule "vim/bundle/AutoComplPop"]
+	path = vim/bundle/AutoComplPop
+	url = https://github.com/vim-scripts/AutoComplPop.git
