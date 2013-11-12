@@ -29,3 +29,5 @@ autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
 
 map <C-K> :pyf /usr/share/vim/vimfiles/syntax/clang-format.py<cr>
 imap <C-K> <c-o>:pyf /usr/share/vim/vimfiles/syntax/clang-format.py<cr>
+
+execute pathogen#infect()
