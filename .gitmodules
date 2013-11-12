@@ -7,3 +7,9 @@
 [submodule "vim/bundle/AutoComplPop"]
 	path = vim/bundle/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "vim/bundle/L9"]
+	path = vim/bundle/L9
+	url = https://github.com/vim-scripts/L9.git
+[submodule "vim/bundle/FuzzyFinder"]
+	path = vim/bundle/FuzzyFinder
+	url = https://github.com/vim-scripts/FuzzyFinder.git
