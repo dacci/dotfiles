@@ -8,6 +8,3 @@ let perl_synwrite_qf = 1
 
 map ,pt <Esc>:%! perltidy<Cr>
 map ,ptv <Esc>:'<,'>! perltidy<Cr>
-
-set softtabstop=4
-set shiftwidth=4

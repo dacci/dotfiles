@@ -19,9 +19,6 @@ set scrolloff=5
 filetype plugin on
 
 " Indentations
-set tabstop=8
-set softtabstop=2
-set shiftwidth=2
 set expandtab
 set autoindent
 
