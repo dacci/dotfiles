@@ -18,6 +18,9 @@ end_of_line = crlf
 indent_size = 4
 indent_brace_style = Allman
 
+[*.go]
+indent_style = tab
+
 [{*.mak,Makefile}]
 indent_style = tab
 indent_size = unset
