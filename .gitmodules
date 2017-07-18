@@ -16,3 +16,45 @@
 [submodule "vim/bundle/editorconfig"]
 	path = vim/bundle/editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "atom/packages/monokai"]
+	path = atom/packages/monokai
+	url = https://github.com/kevinsawicki/monokai.git
+[submodule "atom/packages/sort-lines"]
+	path = atom/packages/sort-lines
+	url = https://github.com/atom/sort-lines.git
+[submodule "atom/packages/simple-drag-drop-text"]
+	path = atom/packages/simple-drag-drop-text
+	url = https://github.com/geoffthibeau/simple-drag-drop-text.git
+[submodule "atom/packages/sublime-block-comment"]
+	path = atom/packages/sublime-block-comment
+	url = https://github.com/UltCombo/atom-sublime-block-comment.git
+[submodule "atom/packages/auto-encoding"]
+	path = atom/packages/auto-encoding
+	url = https://github.com/t-ishii/auto-encoding.git
+[submodule "atom/packages/change-case"]
+	path = atom/packages/change-case
+	url = https://github.com/robhurring/atom-change-case.git
+[submodule "atom/packages/editorconfig"]
+	path = atom/packages/editorconfig
+	url = https://github.com/sindresorhus/atom-editorconfig.git
+[submodule "atom/packages/keyboard-scroll"]
+	path = atom/packages/keyboard-scroll
+	url = https://github.com/samu/atom-keyboard-scroll.git
+[submodule "atom/packages/highlight-selected"]
+	path = atom/packages/highlight-selected
+	url = https://github.com/richrace/highlight-selected.git
+[submodule "atom/packages/highlight-line"]
+	path = atom/packages/highlight-line
+	url = https://github.com/richrace/highlight-line.git
+[submodule "atom/packages/emmet"]
+	path = atom/packages/emmet
+	url = https://github.com/emmetio/emmet-atom.git
+[submodule "atom/packages/markdown-writer"]
+	path = atom/packages/markdown-writer
+	url = https://github.com/zhuochun/md-writer.git
+[submodule "atom/packages/language-batch"]
+	path = atom/packages/language-batch
+	url = https://github.com/footballhead/language-batch.git
+[submodule "atom/packages/language-powershell"]
+	path = atom/packages/language-powershell
+	url = https://github.com/jugglingnutcase/language-powershell.git
