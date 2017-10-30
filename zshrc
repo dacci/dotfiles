@@ -1,6 +1,6 @@
 ## .zshrc
 
-OS=`uname -o`
+OS=`uname -s`
 
 ## Prompts
 setopt prompt_subst
@@ -86,12 +86,17 @@ preexec() {
 
 ## Misc
 # Use hard limits, except for a smaller stack and no core dumps
-if [ "$OS" != "Cygwin" ]; then
-  unlimit
-  limit stack 8192
-  limit core 0
-  limit -s
-fi
+case "$OS" in
+  CYGWIN*)
+    ;;
+
+  *)
+    unlimit
+    limit stack 8192
+    limit core 0
+    limit -s
+    ;;
+esac
 
 # Autoload all shell functions
 for func in $^fpath/*(N-.x:t); autoload $func
@@ -111,7 +116,7 @@ setopt ignore_eof
 setopt print_eight_bit      # multi character byte
 setopt no_beep
 
-[ -z "$LS_COLORS" ] && eval `dircolors -b`
+[ -z "$LS_COLORS" ] && command -v dircolors >/dev/null && eval `dircolors -b`
 
 autoload zmv
 #alias zmv='noglob zmv -W'

@@ -2,10 +2,8 @@
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-alias ls='ls -Fh --color=auto'
 alias ll='ls -l'
 alias lsa='ls -a'
-alias lsz='ls -Z'
 alias lla="ll -a"
 alias ssh-agent-start='eval `ssh-agent` && ssh-add'
 alias grep='grep --color=auto'
@@ -13,6 +11,22 @@ alias pcregrep='pcregrep --color=auto'
 alias manj='LANG=ja_JP.UTF-8 man'
 alias vi=vim
 alias view='vim -R'
+
+OS="`uname -s`"
+
+case "$OS" in
+  Darwin)
+    alias ls='ls -FhG'
+    ;;
+
+  *)
+    alias ls='ls -Fh --color'
+    ;;
+esac
+
+if [ "$OS" = Linux ]; then
+  alias lsz='ls -Z'
+fi
 
 if [ `id -u` -gt 0 ]; then
   alias yum='sudo yum'
