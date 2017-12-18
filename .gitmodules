@@ -58,3 +58,6 @@
 [submodule "atom/packages/language-powershell"]
 	path = atom/packages/language-powershell
 	url = https://github.com/jugglingnutcase/language-powershell.git
+[submodule "atom/packages/atom-notes"]
+	path = atom/packages/atom-notes
+	url = https://github.com/lexicalunit/atom-notes.git
