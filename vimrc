@@ -1,14 +1,19 @@
-"" .vimrc
+" Plugin
+call plug#begin()
+  Plug 'crusoexia/vim-monokai'
+  Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-surround'
+  Plug 'vim-scripts/AutoComplPop'
+  Plug 'vim-scripts/FuzzyFinder'
+  Plug 'vim-scripts/L9'
+  Plug 'PProvost/vim-ps1'
+call plug#end()
 
-colorscheme evening_black
+" Color
+syntax on
+colorscheme monokai
 
-if has('iconv')
-  runtime detect_encoding.vim
-else
-  set fileencodings=ucs-bom,iso-2022-jp,shift-jis,euc-jp,utf-8
-  set fileformats=dos,unix,mac
-endif
-
+" Visual
 set noerrorbells
 set visualbell
 set number
@@ -16,15 +21,11 @@ set showcmd
 set incsearch
 set scrolloff=5
 
-filetype plugin on
-
-" Indentations
-set expandtab
+" Indentation
 set autoindent
+set smartindent
+set expandtab
 
+" Misc
+filetype plugin on
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
-
-map <C-K> :pyf /usr/share/vim/vimfiles/syntax/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/vim/vimfiles/syntax/clang-format.py<cr>
-
-execute pathogen#infect()
