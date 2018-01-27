@@ -20,7 +20,7 @@ case "$OS" in
     ;;
 
   *)
-    alias ls='ls -Fh --color'
+    alias ls='ls -Fh --color=auto'
     ;;
 esac
 
