@@ -5,12 +5,8 @@ alias cp='nocorrect cp -i'    # no spelling correction on cp
 alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
 alias locate='noglob locate'
 alias wget='noglob wget'
+alias yum='noglob yum'
 alias zmv='noglob zmv'
 
-alias clang-format-all='clang-format -i **/*.(h|cpp)~res/**'
-
-if [ `id -u` -gt 0 ]; then
-  alias yum='noglob sudo yum'
-else
-  alias yum='noglob yum'
-fi
+alias cpplint-all='cpplint.py **/*.(h|cc|cpp)~res/**'
+alias clang-format-all='clang-format -i **/*.(h|cc|cpp)~res/**'
