@@ -18,7 +18,3 @@ OS="`uname -s`"
 if [ "$OS" = Linux ]; then
   alias lsz='ls -Z'
 fi
-
-if [ `id -u` -gt 0 ]; then
-  alias yum='sudo yum'
-fi
