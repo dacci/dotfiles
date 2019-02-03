@@ -2,6 +2,7 @@
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
+alias ls='ls -Fh --color=auto'
 alias ll='ls -l'
 alias lsa='ls -a'
 alias lla="ll -a"
@@ -13,16 +14,6 @@ alias vi=vim
 alias view='vim -R'
 
 OS="`uname -s`"
-
-case "$OS" in
-  Darwin)
-    alias ls='ls -FhG'
-    ;;
-
-  *)
-    alias ls='ls -Fh --color=auto'
-    ;;
-esac
 
 if [ "$OS" = Linux ]; then
   alias lsz='ls -Z'
