@@ -16,8 +16,11 @@ case `uname -s` in
     ;;
 esac
 
+pushd home
 for f in *; do
   ln --symbolic --force --relative --no-target-directory "$f" "$HOME/.$f"
 done
+popd
 
-ln --symbolic --force --relative --target-directory="$PROFILE_DIR" .roaming/*
+[ -d "$PROFILE_DIR" ] || mkdir -p "$PROFILE_DIR"
+ln --symbolic --force --relative --target-directory="$PROFILE_DIR" config/*
