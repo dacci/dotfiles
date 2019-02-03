@@ -1,8 +1,8 @@
 # .zlogin
 
 # ssh-agent
-#[ -z "$SSH_AGENT_PID" ] && eval `ssh-agent`
-#[ -n "$SSH_AGENT_PID" ] && ssh-add
+#[ -z "$SSH_AUTH_SOCK" ] && eval `ssh-agent`
+#[ -n "$SSH_AUTH_SOCK" ] && ssh-add
 
 # Launch screen
 #case "$TERM" in
