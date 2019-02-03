@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "'Source Han Code JP', Menlo, Monaco, Consolas, 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "editor.tabSize": 2,
+    "emmet.triggerExpansionOnTab": true,
+    "extensions.ignoreRecommendations": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.fontSize": 12,
+    "workbench.startupEditor": "newUntitledFile"
+}
