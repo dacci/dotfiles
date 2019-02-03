@@ -2,16 +2,22 @@
 
 cd "$(dirname $0)"
 
-if [ "`uname -s`" = "Darwin" ]; then
-  for f in *; do
-    ln -sfh "$PWD/$f" "$HOME/.$f"
-  done
-else
-  for f in *; do
-    ln --symbolic --force --relative --no-target-directory "$f" "$HOME/.$f"
-  done
+case `uname -s` in
+  CYGWIN*)
+    PROFILE_DIR="$HOME/AppData/Roaming"
+    ;;
 
-  if [ -n "$APPDATA" ]; then
-    ln --symbolic --force --relative --target-directory="$HOME/AppData/Roaming" .roaming/*
-  fi
-fi
+  Darwin)
+    PROFILE_DIR="$HOME/Library/Application Support"
+    ;;
+
+  *)
+    PROFILE_DIR="$HOME/.config"
+    ;;
+esac
+
+for f in *; do
+  ln --symbolic --force --relative --no-target-directory "$f" "$HOME/.$f"
+done
+
+ln --symbolic --force --relative --target-directory="$PROFILE_DIR" .roaming/*
