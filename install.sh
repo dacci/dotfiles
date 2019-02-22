@@ -24,3 +24,5 @@ popd
 
 [ -d "$PROFILE_DIR" ] || mkdir -p "$PROFILE_DIR"
 ln --symbolic --force --relative --target-directory="$PROFILE_DIR" config/*
+
+echo | vim +PlugInstall +q +q
