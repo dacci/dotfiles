@@ -4,10 +4,13 @@
     "editor.tabSize": 2,
     "emmet.triggerExpansionOnTab": true,
     "extensions.ignoreRecommendations": true,
+    "files.autoGuessEncoding": true,
+    "files.enableTrash": false,
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "terminal.integrated.fontSize": 12,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.highlightModifiedTabs": true
 }
