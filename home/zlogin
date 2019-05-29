@@ -10,6 +10,12 @@
 #    ;;
 #
 #  *)
-#    tty -s && screen -xR
+#    if tty -s; then
+#      if tmux has-session; then
+#        tmux attach-session
+#      else
+#        tmux
+#      fi
+#    fi
 #    ;;
 #esac
