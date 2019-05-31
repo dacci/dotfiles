@@ -3,6 +3,6 @@
     {
         "key": "ctrl+j",
         "command": "editor.action.joinLines",
-        "when": "editorTextFocus && !editorReadonly"
+        "when": "editorTextFocus && !editorReadonly && !isMac"
     }
 ]
