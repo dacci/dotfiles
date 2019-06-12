@@ -1,4 +1,5 @@
 # Looks
+ThemeFile=xterm
 Transparency=off
 CursorType=block
 CursorBlinks=no
@@ -15,6 +16,7 @@ Rows=48
 ScrollbackLines=4096
 ScrollMod=off
 # Terminal
+Term=xterm-256color
 BellType=0
 BellTaskbar=no
 # Command line
