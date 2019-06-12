@@ -25,4 +25,5 @@ popd
 [ -d "$PROFILE_DIR" ] || mkdir -p "$PROFILE_DIR"
 ln --symbolic --force --relative --target-directory="$PROFILE_DIR" config/*
 
-echo | vim +PlugInstall +q +q
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+[ $? == 0 ] && echo | vim +PlugUpdate +q +q
