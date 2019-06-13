@@ -12,7 +12,7 @@ case `uname -s` in
     ;;
 
   *)
-    PROFILE_DIR="$HOME/.config"
+    PROFILE_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
     ;;
 esac
 
