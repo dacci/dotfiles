@@ -1,12 +1,20 @@
-# Zsh specific aliases
-alias rm='nocorrect rm -i'    # no spelling correction on mv
-alias mv='nocorrect mv -i'    # no spelling correction on mv
-alias cp='nocorrect cp -i'    # no spelling correction on cp
-alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+# vim: ft=zsh
+
+alias ls='ls -Fh --color=auto'
+alias ll='ls -l'
+alias lsa='ls -a'
+alias lla='ll -a'
+alias lsz='ls -Z'
+alias grep='grep --color=auto'
+alias pcregrep='pcregrep --color=auto'
+alias vi=vim
+alias view='vim -R'
+alias userctl='systemctl --user'
+
+alias rm='nocorrect rm -i'
+alias mv='nocorrect mv -i'
+alias cp='nocorrect cp -i'
+alias mkdir='nocorrect mkdir'
 alias locate='noglob locate'
 alias wget='noglob wget'
-alias yum='noglob yum'
 alias zmv='noglob zmv'
-
-alias cpplint-all='cpplint.py **/*.(h|cc|cpp)~res/**'
-alias clang-format-all='clang-format -i **/*.(h|cc|cpp)~res/**'

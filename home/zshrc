@@ -120,8 +120,7 @@ setopt no_beep
 autoload zmv
 #alias zmv='noglob zmv -W'
 
-unset OS
-
 # User specific aliases and functions
-[ -f ~/.bash_alias ] && source ~/.bash_alias
 [ -f ~/.zalias ] && source ~/.zalias
+
+unset OS
