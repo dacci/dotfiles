@@ -49,53 +49,40 @@ HISTFILE=~/.zsh_history
 setopt no_flow_control
 
 echo_caption() {
-  case "$TERM" in
-    [xk]term|rxvt|screen*)
-      print -nP "\e]0;$1\\C-g"
-      ;;
-  esac
+  if [[ "$TERM" =~ '([xk]term|rxvt|screen.*)' ]]; then
+    print -nP "\e]0;$1\\C-g"
+  fi
 }
 
 chpwd() {
-  case "$TERM" in
-    screen*)
-      screen -qX chdir "`pwd`" >/dev/null 2>&1
-      ;;
-  esac
+  if [[ "$TERM" =~ 'screen.*' ]]; then
+    screen -qX chdir "`pwd`" >/dev/null 2>&1
+  fi
 }
 
 precmd() {
   echo_caption %n@%m:%~
 
-  case "$TERM" in
-    screen*)
-      echo -ne "\ekzsh\e\\"
-      ;;
-  esac
+  if [[ "$TERM" =~ 'screen.*' ]]; then
+    echo -ne "\ekzsh\e\\"
+  fi
 }
 
 preexec() {
-  case "$TERM" in
-    screen*)
-      local -a cmd; cmd=(${(z)1})
-      echo -ne "\ek$cmd[1]\e\\"
-      ;;
-  esac
+  if [[ "$TERM" =~ 'screen.*' ]]; then
+    local -a cmd; cmd=(${(z)1})
+    echo -ne "\ek$cmd[1]\e\\"
+  fi
 }
 
 ## Misc
 # Use hard limits, except for a smaller stack and no core dumps
-case "$OS" in
-  CYGWIN*)
-    ;;
-
-  *)
-    unlimit
-    limit stack 8192
-    limit core 0
-    limit -s
-    ;;
-esac
+if [[ ! "$OS" =~ 'CYGWIN*' ]]; then
+  unlimit
+  limit stack 8192
+  limit core 0
+  limit -s
+fi
 
 # Autoload all shell functions
 for func in $^fpath/*(N-.x:t); autoload $func
