@@ -6,7 +6,6 @@ call plug#begin()
   Plug 'vim-scripts/AutoComplPop'
   Plug 'vim-scripts/FuzzyFinder'
   Plug 'vim-scripts/L9'
-  Plug 'PProvost/vim-ps1'
 call plug#end()
 
 " Color
