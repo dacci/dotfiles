@@ -20,11 +20,6 @@ set showcmd
 set incsearch
 set scrolloff=5
 
-" Indentation
-set autoindent
-set smartindent
-set expandtab
-
 " Misc
 filetype plugin on
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
