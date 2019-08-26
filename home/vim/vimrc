@@ -3,9 +3,16 @@ call plug#begin()
   Plug 'crusoexia/vim-monokai'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-surround'
-  Plug 'vim-scripts/AutoComplPop'
   Plug 'vim-scripts/FuzzyFinder'
   Plug 'vim-scripts/L9'
+
+  if has('python3')
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'Shougo/deoplete.nvim'
+  else
+    Plug 'vim-scripts/AutoComplPop'
+  endif
 call plug#end()
 
 " Color
@@ -23,3 +30,5 @@ set scrolloff=5
 " Misc
 filetype plugin on
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep copen
+
+let g:deoplete#enable_at_startup = 1
