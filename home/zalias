@@ -9,7 +9,7 @@ alias grep='grep --color=auto'
 alias pcregrep='pcregrep --color=auto'
 alias vi=vim
 alias view='vim -R'
-alias userctl='systemctl --user'
+alias userctl='/bin/systemctl --user'
 
 alias rm='nocorrect rm -i'
 alias mv='nocorrect mv -i'
@@ -18,3 +18,9 @@ alias mkdir='nocorrect mkdir'
 alias locate='noglob locate'
 alias wget='noglob wget'
 alias zmv='noglob zmv'
+
+if [[ "$(id -u)" != 0 ]]; then
+  alias apt='sudo apt'
+  alias systemctl='sudo systemctl'
+  alias yum='sudo yum'
+fi
