@@ -3,6 +3,7 @@ call plug#begin()
   Plug 'crusoexia/vim-monokai'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-abolish'
   Plug 'vim-scripts/FuzzyFinder'
   Plug 'vim-scripts/L9'
 
