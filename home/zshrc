@@ -101,6 +101,7 @@ setopt auto_cd
 setopt ignore_eof
 setopt print_eight_bit      # multi character byte
 setopt no_beep
+setopt noclobber
 
 [ -z "$LS_COLORS" ] && command -v dircolors >/dev/null && eval `dircolors -b`
 
