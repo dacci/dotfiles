@@ -3,7 +3,7 @@
 cd "$(dirname $0)"
 
 case `uname -s` in
-  CYGWIN*)
+  CYGWIN* | MINGW*)
     PROFILE_DIR="$HOME/AppData/Roaming"
     ;;
 
