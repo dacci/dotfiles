@@ -1,5 +1,5 @@
 {
-    "editor.fontFamily": "'Source Han Code JP', Menlo, Monaco, Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'Source Han Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
     "editor.tabSize": 2,
     "emmet.triggerExpansionOnTab": true,
