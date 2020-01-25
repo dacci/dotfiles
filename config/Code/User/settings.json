@@ -1,16 +1,25 @@
 {
     "editor.fontFamily": "'Source Han Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
+    "editor.suggestSelection": "first",
     "editor.tabSize": 2,
     "emmet.triggerExpansionOnTab": true,
     "extensions.ignoreRecommendations": true,
     "files.autoGuessEncoding": true,
     "files.enableTrash": false,
     "files.eol": "\n",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "java.format.settings.url": "https://google.github.io/styleguide/eclipse-java-google-style.xml",
     "terminal.integrated.fontSize": 12,
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.highlightModifiedTabs": true
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.startupEditor": "newUntitledFile"
 }
