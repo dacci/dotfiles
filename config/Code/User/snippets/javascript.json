@@ -1,0 +1,23 @@
+{
+  "async IIFE": {
+    "prefix": "start",
+    "body": [
+      "'use strict';",
+      "",
+      "(async () => {",
+      "  $1",
+      "})()",
+      "    .catch(console.error);"
+    ]
+  },
+  "Lambda handler": {
+    "prefix": "lambda",
+    "body": [
+      "'use strict';",
+      "",
+      "exports.${1:handler} = async (event) => {",
+      "  $2",
+      "};"
+    ]
+  }
+}
