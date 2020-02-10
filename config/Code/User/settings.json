@@ -26,5 +26,42 @@
     "terminal.integrated.fontSize": 12,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.editor.highlightModifiedTabs": true,
-    "workbench.startupEditor": "newUntitledFile"
+    "workbench.startupEditor": "newUntitledFile",
+    "yaml.customTags": [
+        "!Base64",
+        "!Cidr",
+        "!And",
+        "!And sequence",
+        "!Equals",
+        "!Equals sequence",
+        "!If",
+        "!If sequence",
+        "!Not",
+        "!Not sequence",
+        "!Or",
+        "!Or sequence",
+        "!FindInMap",
+        "!FindInMap sequence",
+        "!GetAtt",
+        "!GetAZs",
+        "!ImportValue",
+        "!ImportValue sequence",
+        "!Join",
+        "!Join sequence",
+        "!Select",
+        "!Select sequence",
+        "!Split",
+        "!Split sequence",
+        "!Sub",
+        "!Sub sequence",
+        "!Ref"
+    ],
+    "yaml.schemas": {
+        "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json": [
+            "*.cf.yaml",
+            "*.cf.yml",
+            "*.cfn.yaml",
+            "*.cfn.yml"
+        ]
+    }
 }
