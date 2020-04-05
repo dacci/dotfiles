@@ -4,5 +4,10 @@
         "key": "ctrl+j",
         "command": "editor.action.joinLines",
         "when": "editorTextFocus && !editorReadonly && !isMac"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.files.saveAll",
+        "when": "!isMac"
     }
 ]
