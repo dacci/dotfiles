@@ -25,8 +25,5 @@ indent_size = unset
 [*.pl]
 indent_size = 4
 
-[*.ps1]
-end_of_line = crlf
-
 [*.py]
 indent_size = 4
