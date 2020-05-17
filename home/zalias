@@ -18,9 +18,3 @@ alias mkdir='nocorrect mkdir'
 alias locate='noglob locate'
 alias wget='noglob wget'
 alias zmv='noglob zmv'
-
-if [[ "$(id -u)" != 0 ]]; then
-  alias apt='sudo apt'
-  alias systemctl='sudo systemctl'
-  alias yum='sudo yum'
-fi
