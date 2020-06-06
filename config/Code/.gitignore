@@ -1,1 +1,10 @@
-*
+*Cache*/
+*Storage*/
+logs/
+*-journal
+*.json
+
+Cookies
+Network Persistent State
+TransportSecurity
+machineid
