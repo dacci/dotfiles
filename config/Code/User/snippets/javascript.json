@@ -5,7 +5,7 @@
       "'use strict';",
       "",
       "(async () => {",
-      "  $1",
+      "  $0",
       "})()",
       "    .catch(console.error);"
     ]
@@ -15,8 +15,10 @@
     "body": [
       "'use strict';",
       "",
+      "const AWS = require('aws-sdk');",
+      "",
       "exports.${1:handler} = async (event) => {",
-      "  $2",
+      "  $0",
       "};"
     ]
   }

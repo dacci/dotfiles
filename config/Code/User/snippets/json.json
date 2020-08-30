@@ -1,0 +1,23 @@
+{
+  "AWS IAM policy": {
+    "prefix": "policy",
+    "body": [
+      "{",
+      "  \"Version\": \"2012-10-17\",",
+      "  \"Statement\": [$0]",
+      "}"
+    ],
+    "description": "AWS IAM policy document"
+  },
+  "AWS IAM policy statement": {
+    "prefix": "statement",
+    "body": [
+      "{",
+      "  \"Effect\": \"Allow\",",
+      "  \"Action\": [$1],",
+      "  \"Resource\": [$2]",
+      "}$0"
+    ],
+    "description": "AWS IAM policy statement"
+  }
+}
