@@ -4,11 +4,18 @@
     "body": [
       "plugins {",
       "  id 'java'",
-      "  id 'com.diffplug.spotless' version '${1:5.1.1}'",
+      "  id 'application'",
+      "  id 'com.diffplug.spotless' version '${1:5.6.1}'",
       "  id 'net.ltgt.errorprone' version '1.2.1'",
       "}",
       "",
       "sourceCompatibility = '11'",
+      "",
+      "configurations {",
+      "  compileOnly {",
+      "    extendsFrom annotationProcessor",
+      "  }",
+      "}",
       "",
       "repositories {",
       "  mavenCentral()",
@@ -16,6 +23,14 @@
       "",
       "dependencies {",
       "  implementation platform('org.junit:junit-bom:latest.release')",
+      "",
+      "  compileOnly 'org.projectlombok:lombok:latest.release'",
+      "  annotationProcessor 'org.projectlombok:lombok:latest.release'",
+      "",
+      "  implementation 'org.slf4j:slf4j-api:latest.release'",
+      "  runtimeOnly('ch.qos.logback:logback-classic:latest.release') {",
+      "    exclude group: 'com.sun.mail', module: 'javax.mail'",
+      "  }",
       "",
       "  testImplementation 'org.junit.jupiter:junit-jupiter-api'",
       "  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'",
@@ -35,7 +50,19 @@
       "",
       "test {",
       "  useJUnitPlatform()",
+      "}",
+      "",
+      "application {",
+      "  mainClass = '$2'",
       "}"
     ]
+  },
+  "AWS SDK": {
+    "prefix": "aws",
+    "body": "implementation platform('software.amazon.awssdk:bom:${1:latest.release}')$0"
+  },
+  "AWS SDK v1": {
+    "prefix": "aws",
+    "body": "implementation platform('com.amazonaws:aws-java-sdk-bom:${1:latest.release}')$0"
   }
 }

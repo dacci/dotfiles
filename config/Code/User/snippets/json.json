@@ -19,5 +19,19 @@
       "}$0"
     ],
     "description": "AWS IAM policy statement"
+  },
+  "cdk.json": {
+    "prefix": "cdk",
+    "body": [
+      "{",
+      "  \"app\": \"npx ts-node ${1:cdk/index.ts}\",",
+      "  \"context\": {",
+      "    \"@aws-cdk/core:enableStackNameDuplicates\": \"true\",",
+      "    \"aws-cdk:enableDiffNoFail\": \"true\",",
+      "    \"@aws-cdk/core:stackRelativeExports\": \"true\"",
+      "  }",
+      "}"
+    ],
+    "description": "cdk.json"
   }
 }
