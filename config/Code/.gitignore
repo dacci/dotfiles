@@ -6,6 +6,7 @@ logs/
 *.json
 
 Cookies
+Crashpad*
 Network Persistent State
 TransportSecurity
 machineid
