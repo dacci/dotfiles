@@ -1,4 +1,5 @@
 {
+    "aws.telemetry": false,
     "editor.fontFamily": "'Source Han Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
     "editor.suggestSelection": "first",
@@ -11,9 +12,9 @@
     "files.eol": "\n",
     "files.exclude": {
         "**/.classpath": true,
+        "**/.factorypath": true,
         "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
+        "**/.settings": true
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -24,9 +25,11 @@
     "java.completion.overwrite": false,
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.format.settings.url": "https://google.github.io/styleguide/eclipse-java-google-style.xml",
-    "java.project.importOnFirstTimeStartup": "automatic",
-    "java.refactor.renameFromFileExplorer": "autoApply",
     "java.semanticHighlighting.enabled": true,
+    "javascript.preferences.quoteStyle": "single",
+    "python.languageServer": "Pylance",
+    "python.showStartPage": false,
+    "redhat.telemetry.enabled": false,
     "terminal.integrated.allowChords": false,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.sendKeybindingsToShell": true,
@@ -70,5 +73,32 @@
             "*.cfn.yaml",
             "*.cfn.yml"
         ]
+    },
+    "[java]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.spotlessGradle": true
+        },
+        "spotlessGradle.diagnostics.enable": true,
+        "spotlessGradle.format.enable": true
+    },
+    "[javascript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
+    "[javascriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
+    "[typescript]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
+    },
+    "[typescriptreact]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll.eslint": true
+        }
     }
 }
