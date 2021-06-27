@@ -27,7 +27,6 @@
     "java.format.settings.url": "https://google.github.io/styleguide/eclipse-java-google-style.xml",
     "java.semanticHighlighting.enabled": true,
     "javascript.preferences.quoteStyle": "single",
-    "python.languageServer": "Pylance",
     "python.showStartPage": false,
     "redhat.telemetry.enabled": false,
     "terminal.integrated.allowChords": false,
