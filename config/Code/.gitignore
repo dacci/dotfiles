@@ -1,12 +1,4 @@
-*Cache*/
-*Reports*/
-*Storage*/
-logs/
-*-journal
-*.json
-
-Cookies
-Crashpad*
-Network Persistent State
-TransportSecurity
-machineid
+/*
+!/User
+User/*/
+!User/snippets
