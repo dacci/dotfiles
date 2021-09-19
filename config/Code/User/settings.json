@@ -1,5 +1,6 @@
 {
     "aws.telemetry": false,
+    "docker.showStartPage": false,
     "editor.fontFamily": "'Source Han Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
     "editor.suggestSelection": "first",
@@ -19,6 +20,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "go.toolsManagement.autoUpdate": true,
     "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
     "java.codeGeneration.useBlocks": true,
     "java.completion.guessMethodArguments": true,
@@ -29,6 +31,8 @@
     "javascript.preferences.quoteStyle": "single",
     "python.showStartPage": false,
     "redhat.telemetry.enabled": false,
+    "rust-client.updateOnStartup": true,
+    "rust.all_features": true,
     "terminal.integrated.allowChords": false,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.sendKeybindingsToShell": true,
@@ -91,6 +95,9 @@
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
         }
+    },
+    "[rust]": {
+        "editor.formatOnSave": true
     },
     "[typescript]": {
         "editor.codeActionsOnSave": {
