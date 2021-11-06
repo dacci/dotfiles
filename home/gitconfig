@@ -12,6 +12,7 @@
 	autostash = true
 [merge]
 	tool = vimdiff3
+	conflictStyle = diff3
 [mergetool]
 	prompt = false
 	keepBackup = false
@@ -20,3 +21,5 @@
 	patternType = perl
 [init]
 	defaultBranch = main
+[pull]
+	rebase = false

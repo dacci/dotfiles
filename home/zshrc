@@ -48,33 +48,6 @@ HISTFILE=~/.zsh_history
 # Disable C-s
 setopt no_flow_control
 
-echo_caption() {
-  if [[ "$TERM" =~ '([xk]term|rxvt|screen.*)' ]]; then
-    print -nP "\e]0;$1\\C-g"
-  fi
-}
-
-chpwd() {
-  if [[ "$TERM" =~ 'screen.*' ]]; then
-    screen -qX chdir "`pwd`" >/dev/null 2>&1
-  fi
-}
-
-precmd() {
-  echo_caption %n@%m:%~
-
-  if [[ "$TERM" =~ 'screen.*' ]]; then
-    echo -ne "\ekzsh\e\\"
-  fi
-}
-
-preexec() {
-  if [[ "$TERM" =~ 'screen.*' ]]; then
-    local -a cmd; cmd=(${(z)1})
-    echo -ne "\ek$cmd[1]\e\\"
-  fi
-}
-
 ## Misc
 # Use hard limits, except for a smaller stack and no core dumps
 if [[ ! "$OS" =~ 'CYGWIN*' ]]; then

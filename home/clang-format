@@ -1,4 +1,5 @@
 BasedOnStyle:  Google
+IncludeBlocks: Preserve
 DerivePointerAlignment: false
 MacroBlockBegin: '(wx)?BEGIN_[A-Z_]+_(MAP(_EX)?|TABLE)'
 MacroBlockEnd:   '(wx)?END_[A-Z_]+_(MAP|TABLE)'
