@@ -1,4 +1,4 @@
-if [[ $TERM != screen* && $TERM_PROGRAM != vscode ]]; then
+if [[ $TERM != screen* && $TERM_PROGRAM != vscode && -z $TERMINAL_EMULATOR ]]; then
   if tmux has-session 2>/dev/null; then
     tmux attach-session
   else

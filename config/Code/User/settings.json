@@ -27,7 +27,9 @@
     "java.completion.guessMethodArguments": true,
     "java.completion.overwrite": false,
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.eclipse.downloadSources": true,
     "java.format.settings.url": "https://google.github.io/styleguide/eclipse-java-google-style.xml",
+    "java.maven.downloadSources": true,
     "java.semanticHighlighting.enabled": true,
     "javascript.preferences.quoteStyle": "single",
     "python.showStartPage": false,
@@ -87,27 +89,12 @@
         "spotlessGradle.diagnostics.enable": true,
         "spotlessGradle.format.enable": true
     },
-    "[javascript]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
-    },
-    "[javascriptreact]": {
+    "[javascript][javascriptreact][typescript][typescriptreact]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
         }
     },
     "[rust]": {
         "editor.formatOnSave": true
-    },
-    "[typescript]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
-    },
-    "[typescriptreact]": {
-        "editor.codeActionsOnSave": {
-            "source.fixAll.eslint": true
-        }
     }
 }

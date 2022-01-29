@@ -23,3 +23,11 @@
 	defaultBranch = main
 [pull]
 	rebase = false
+[tag]
+	gpgSign = true
+[gitflow "prefix"]
+	feature = feature/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = v

@@ -1,0 +1,21 @@
+{
+  "main with Result": {
+    "prefix": "main",
+    "body": [
+      "fn main() -> Result<()> {",
+      "    $0",
+      "    Ok(())",
+      "}",
+    ]
+  },
+  "tokio async main": {
+    "prefix": "main",
+    "body": [
+      "#[tokio::main]",
+      "async fn main() -> Result<()> {",
+      "    $0",
+      "    Ok(())",
+      "}",
+    ],
+  }
+}

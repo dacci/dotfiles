@@ -2,9 +2,11 @@
   "shell script": {
     "prefix": "start",
     "body": [
-      "#!/bin/bash",
+      "#!/usr/bin/env bash",
       "#",
       "# ${1:description}",
+      "",
+      "set -euo pipefail",
       "",
       "err() {",
       "  echo \"[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@\" >&2",
