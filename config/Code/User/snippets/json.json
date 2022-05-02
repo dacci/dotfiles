@@ -20,6 +20,10 @@
     ],
     "description": "AWS IAM policy statement"
   },
+  "Amazon Resource Name": {
+    "prefix": "arn",
+    "body": "\"arn:aws:${1:SERVICE}:${2:REGION}:${3:ACCOUNT_ID}:${4:RESOURCE}\""
+  },
   "cdk.json": {
     "prefix": "cdk",
     "body": [
