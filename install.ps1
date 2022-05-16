@@ -28,11 +28,11 @@ if ($IsWindows -or $env:OS -eq "Windows_NT") {
 }
 
 Get-ChildItem "$PSScriptRoot/home" | Foreach-Object {
-  Update-SymbolicLink "$HOME/.$($_.Name)" $_
+  Update-SymbolicLink "$HOME/.$($_.Name)" $_.FullName
 }
 
 Get-ChildItem "$PSScriptRoot/config" | Foreach-Object {
-  Update-SymbolicLink "$ProfileDir/$($_.Name)" $_
+  Update-SymbolicLink "$ProfileDir/$($_.Name)" $_.FullName
 }
 
 if (-not (Test-Path "$HOME/.vim/autoload")) {
