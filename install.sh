@@ -1,29 +1,49 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-cd "$(dirname $0)"
+set -euo pipefail
+shopt -s nullglob
 
-case `uname -s` in
-  CYGWIN* | MINGW*)
-    PROFILE_DIR="$HOME/AppData/Roaming"
-    ;;
+update-link() {
+  TARGET="$1"
+  LINK="$2"
 
-  Darwin)
-    PROFILE_DIR="$HOME/Library/Application Support"
-    ;;
+  if [[ ! -e "$LINK" || -h "$LINK" ]]; then
+    ln -frsT "$TARGET" "$LINK"
+  fi
+}
 
-  *)
-    PROFILE_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
-    ;;
-esac
+main() {
+  case `uname -s` in
+    CYGWIN* | MINGW*)
+      PROFILE_DIR="$HOME/AppData/Roaming"
+      ;;
 
-pushd home
-for f in *; do
-  ln --symbolic --force --relative --no-target-directory "$f" "$HOME/.$f"
-done
-popd
+    Darwin)
+      PROFILE_DIR="$HOME/Library/Application Support"
+      ;;
 
-[ -d "$PROFILE_DIR" ] || mkdir -p "$PROFILE_DIR"
-ln --symbolic --force --relative --target-directory="$PROFILE_DIR" config/*
+    *)
+      PROFILE_DIR="${XDG_CONFIG_HOME:-$HOME/.config}"
+      [[ -d "$PROFILE_DIR" ]] || mkdir -p "$PROFILE_DIR"
+      ;;
+  esac
 
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-[ $? == 0 ] && echo | vim +PlugUpdate +q +q
+  cd "$(dirname $0)"
+
+  pushd home
+    for target in *; do
+      update-link "$target" "$HOME/.$target"
+    done
+  popd
+
+  pushd config
+    for target in *; do
+      update-link "$target" "$PROFILE_DIR/$target"
+    done
+  popd
+
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
+    echo | vim +PlugUpdate +q +q
+}
+
+[[ ${#BASH_SOURCE[@]} = 1 ]] && main "$@"
