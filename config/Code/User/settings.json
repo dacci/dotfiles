@@ -1,6 +1,6 @@
 {
     "aws.telemetry": false,
-    "docker.showStartPage": false,
+    "dotfiles.repository": "dacci/dotfiles",
     "editor.fontFamily": "'Source Han Mono', Menlo, Monaco, Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
     "editor.suggestSelection": "first",
@@ -25,17 +25,13 @@
     "java.codeGeneration.hashCodeEquals.useJava7Objects": true,
     "java.codeGeneration.useBlocks": true,
     "java.completion.guessMethodArguments": true,
-    "java.completion.overwrite": false,
     "java.configuration.updateBuildConfiguration": "automatic",
     "java.eclipse.downloadSources": true,
     "java.format.settings.url": "https://google.github.io/styleguide/eclipse-java-google-style.xml",
     "java.maven.downloadSources": true,
-    "java.semanticHighlighting.enabled": true,
     "javascript.preferences.quoteStyle": "single",
-    "python.showStartPage": false,
+    "python.formatting.provider": "black",
     "redhat.telemetry.enabled": false,
-    "rust-client.updateOnStartup": true,
-    "rust.all_features": true,
     "terminal.integrated.allowChords": false,
     "terminal.integrated.fontSize": 12,
     "terminal.integrated.sendKeybindingsToShell": true,
@@ -74,25 +70,19 @@
         "!Condition"
     ],
     "yaml.format.singleQuote": true,
-    "yaml.schemas": {
-        "https://d33vqc0rt9ld30.cloudfront.net/latest/gzip/CloudFormationResourceSpecification.json": [
-            "*.cf.yaml",
-            "*.cf.yml",
-            "*.cfn.yaml",
-            "*.cfn.yml"
-        ]
-    },
     "[java]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.spotlessGradle": true
         },
-        "spotlessGradle.diagnostics.enable": true,
         "spotlessGradle.format.enable": true
     },
     "[javascript][javascriptreact][typescript][typescriptreact]": {
         "editor.codeActionsOnSave": {
             "source.fixAll.eslint": true
         }
+    },
+    "[python]": {
+        "editor.formatOnSave": true
     },
     "[rust]": {
         "editor.formatOnSave": true
