@@ -6,8 +6,8 @@
       "  id 'java'",
       "  id 'jacoco'",
       "  id 'application'",
-      "  id 'com.diffplug.spotless' version '${2:6.2.0}'",
-      "  id 'com.github.spotbugs' version '${3:5.0.5}'",
+      "  id 'com.diffplug.spotless' version '6.11.0'",
+      "  id 'com.github.spotbugs' version '5.0.12'",
       "}",
       "",
       "sourceCompatibility = '11'",
@@ -23,19 +23,18 @@
       "}",
       "",
       "dependencies {",
-      "  implementation platform('org.junit:junit-bom:${4:latest.release}')",
+      "  implementation platform('org.junit:junit-bom:latest.release')",
+      "  implementation platform('org.mockito:mockito-bom:latest.release')",
       "$0",
-      "  compileOnly 'org.projectlombok:lombok:${5:latest.release}'",
-      "  annotationProcessor 'org.projectlombok:lombok:${5:latest.release}'",
+      "  compileOnly 'org.projectlombok:lombok:latest.release'",
+      "  annotationProcessor 'org.projectlombok:lombok:latest.release'",
       "",
-      "  implementation 'org.slf4j:slf4j-api:${6:1.7.+}'",
-      "  runtimeOnly('ch.qos.logback:logback-classic:${7:1.2.+}') {",
-      "    exclude group: 'com.sun.mail', module: 'javax.mail'",
-      "  }",
+      "  implementation 'org.slf4j:slf4j-api:latest.release'",
+      "  runtimeOnly 'ch.qos.logback:logback-classic:latest.release'",
       "",
       "  testImplementation 'org.junit.jupiter:junit-jupiter-params'",
       "  testImplementation 'org.assertj:assertj-core:latest.release'",
-      "  testImplementation 'org.mockito:mockito-junit-jupiter:latest.release'",
+      "  testImplementation 'org.mockito:mockito-junit-jupiter'",
       "  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'",
       "",
       "  spotbugsPlugins 'com.mebigfatguy.sb-contrib:sb-contrib:latest.release'",
@@ -66,12 +65,20 @@
       "}"
     ]
   },
-  "AWS SDK": {
+  "AWS SDK bom": {
     "prefix": "aws",
     "body": "implementation platform('software.amazon.awssdk:bom:${1:latest.release}')$0"
   },
-  "AWS SDK v1": {
+  "AWS SDK": {
+    "prefix": "aws",
+    "body": "implementation 'software.amazon.awssdk:${1:service}'"
+  },
+  "AWS SDK v1 bom": {
     "prefix": "aws",
     "body": "implementation platform('com.amazonaws:aws-java-sdk-bom:${1:latest.release}')$0"
+  },
+  "AWS SDK v1": {
+    "prefix": "aws",
+    "body": "implementation 'com.amazonaws:aws-java-sdk-${1:service}'"
   }
 }
