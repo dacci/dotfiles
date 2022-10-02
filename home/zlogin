@@ -1,11 +1,14 @@
 if [[ $TERM != screen* && $TERM_PROGRAM != vscode && -z $TERMINAL_EMULATOR ]]; then
+  if ! tmux ls 1>/dev/null 2>&1; then
+    tmux
+    return
+  fi
+
   while read session attached; do
     [[ $attached == 0 ]] && break
   done < <(tmux ls -F '#S #{session_attached}' 2>/dev/null)
 
   if [[ -n $session ]]; then
     tmux attach -t $session
-  else
-    tmux
   fi
 fi
