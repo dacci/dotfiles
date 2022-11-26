@@ -1,0 +1,3 @@
+console_mouse: false
+listen_host: localhost
+ssl_insecure: true
